@@ -1,0 +1,36 @@
+#include "qserversocket.h"
+#include <QTcpSocket>
+#include <thread>
+qServerSocket::qServerSocket(QWidget *parent)
+	: QWidget(parent)
+{
+	setThread();
+}
+
+qServerSocket::~qServerSocket()
+{
+	if (t->joinable())
+		t->join();
+
+}
+void qServerSocket::setThread(){
+	t=new std::thread(&qServerSocket::listenSocket,this);
+}
+void qServerSocket::listenSocket()
+{
+	server = new QTcpServer();
+	server->listen(QHostAddress::Any, 1025);
+	if (server->isListening()){
+		while (server->waitForNewConnection(-1))
+		{
+			QTcpSocket *socket = server->nextPendingConnection();
+			if (socket->waitForReadyRead(3000)){
+				qDebug() << "Server: reading "<<socket->bytesAvailable()<<endl<<socket->readAll();
+			}
+			socket->write("Ok. Your message received");
+			socket->waitForBytesWritten(3000);
+			socket->close();
+		}
+	}
+
+}

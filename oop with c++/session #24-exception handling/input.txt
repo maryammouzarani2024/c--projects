@@ -1,0 +1,4 @@
+ 3
+washing 98:31:57 
+cleaning 12:14:57
+walking 08:1:15

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function -->
+<html class="no-js" lang="en-US"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://bytefreaks.net/xmlrpc.php">
+
+<!--[if lt IE 9]>
+				      <script src="https://bytefreaks.net/wp-content/themes/customizr-pro/inc/assets/js/html5.js"></script>
+				    <![endif]-->
+<!--<script type="text/javascript">(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>-->
+<title>C++: “undefined reference to” templated class function – Bytefreaks.net</title>
+<link rel="alternate" hreflang="en-us" href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function">
+<link rel="alternate" hreflang="el" href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function?lang=el">
+
+<meta name="google-site-verification" content="5ZU-CgrpH4EiKAY7tHFazezH-5c7DiEuTpt2Anqntv8">
+<meta name="msvalidate.01" content="66516ADDD28801F939F6241303D4F671">
+<meta name="p:domain_verify" content="28aa1072c57169ffc343a8ac3f468e29">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Bytefreaks.net » Feed" href="https://bytefreaks.net/feed">
+<link rel="alternate" type="application/rss+xml" title="Bytefreaks.net » Comments Feed" href="https://bytefreaks.net/comments/feed">
+<link rel="alternate" type="application/rss+xml" title="Bytefreaks.net » C++: “undefined reference to” templated class function Comments Feed" href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function/feed">
+<!--<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/bytefreaks.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=372e713033282abae4a657fde8944aa8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>-->
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="font-customizer-style-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/font_customizer.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="tc-gfonts-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="mc-front-style-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/mc-front.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-polls-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/polls-css.css" type="text/css" media="all">
+<style id="wp-polls-inline-css" type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background: #d8e1eb;
+	border: 1px solid #c8c8c8;
+}
+
+</style>
+<link rel="stylesheet" id="nnyour_namespace-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/xmltree.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpml-legacy-horizontal-list-0-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/style.css" type="text/css" media="all">
+<style id="wpml-legacy-horizontal-list-0-inline-css" type="text/css">
+.wpml-ls-statics-footer{background-color:#ffffff;}.wpml-ls-statics-footer, .wpml-ls-statics-footer .wpml-ls-sub-menu, .wpml-ls-statics-footer a {border-color:#cdcdcd;}.wpml-ls-statics-footer a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-footer a:hover,.wpml-ls-statics-footer a:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-statics-footer .wpml-ls-current-language>a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-footer .wpml-ls-current-language:hover>a, .wpml-ls-statics-footer .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+</style>
+<link rel="stylesheet" id="wpml-legacy-vertical-list-0-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/style(1).css" type="text/css" media="all">
+<style id="wpml-legacy-vertical-list-0-inline-css" type="text/css">
+.wpml-ls-sidebars-left{background-color:#eeeeee;}.wpml-ls-sidebars-left, .wpml-ls-sidebars-left .wpml-ls-sub-menu, .wpml-ls-sidebars-left a {border-color:#cdcdcd;}.wpml-ls-sidebars-left a {color:#444444;background-color:#ffffff;}.wpml-ls-sidebars-left a:hover,.wpml-ls-sidebars-left a:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-sidebars-left .wpml-ls-current-language>a {color:#444444;background-color:#ffffff;}.wpml-ls-sidebars-left .wpml-ls-current-language:hover>a, .wpml-ls-sidebars-left .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+.wpml-ls-sidebars-right{background-color:#eeeeee;}.wpml-ls-sidebars-right, .wpml-ls-sidebars-right .wpml-ls-sub-menu, .wpml-ls-sidebars-right a {border-color:#cdcdcd;}.wpml-ls-sidebars-right a {color:#444444;background-color:#ffffff;}.wpml-ls-sidebars-right a:hover,.wpml-ls-sidebars-right a:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-sidebars-right .wpml-ls-current-language>a {color:#444444;background-color:#ffffff;}.wpml-ls-sidebars-right .wpml-ls-current-language:hover>a, .wpml-ls-sidebars-right .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+.wpml-ls-sidebars-footer_two{background-color:#eeeeee;}.wpml-ls-sidebars-footer_two, .wpml-ls-sidebars-footer_two .wpml-ls-sub-menu, .wpml-ls-sidebars-footer_two a {border-color:#cdcdcd;}.wpml-ls-sidebars-footer_two a {color:#444444;background-color:#ffffff;}.wpml-ls-sidebars-footer_two a:hover,.wpml-ls-sidebars-footer_two a:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-sidebars-footer_two .wpml-ls-current-language>a {color:#444444;background-color:#ffffff;}.wpml-ls-sidebars-footer_two .wpml-ls-current-language:hover>a, .wpml-ls-sidebars-footer_two .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+.wpml-ls-statics-shortcode_actions{background-color:#eeeeee;}.wpml-ls-statics-shortcode_actions, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu, .wpml-ls-statics-shortcode_actions a {border-color:#cdcdcd;}.wpml-ls-statics-shortcode_actions a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions a:hover,.wpml-ls-statics-shortcode_actions a:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language:hover>a, .wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+</style>
+<link rel="stylesheet" id="wpml-legacy-post-translations-0-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/style(2).css" type="text/css" media="all">
+<link rel="stylesheet" id="dlm-frontend-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/frontend.css" type="text/css" media="all">
+<link rel="stylesheet" id="parent-style-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/style(3).css" type="text/css" media="all">
+<link rel="stylesheet" id="customizr-fa-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/fontawesome-all.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="customizr-common-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/tc_common.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="customizr-skin-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/green.min.css" type="text/css" media="all">
+<style id="customizr-skin-inline-css" type="text/css">
+
+                  .site-title,.site-description,h1,h2,h3,.tc-dropcap {
+                    font-family : 'Fjalla One';
+                    font-weight : 400;
+                  }
+
+                  body,.navbar .nav>li>a {
+                    font-family : 'Cantarell';
+                    font-weight : 400;
+                  }
+table { border-collapse: separate; }
+                           body table { border-collapse: collapse; }
+                          
+.social-links .social-icon:before { content: none } 
+.sticky-enabled .tc-shrink-on .site-logo img {
+    					height:30px!important;width:auto!important
+    				}
+
+    				.sticky-enabled .tc-shrink-on .brand .site-title {
+    					font-size:0.6em;opacity:0.8;line-height:1.2em
+    				}
+
+#tc-push-footer { display: none; visibility: hidden; }
+         .tc-sticky-footer #tc-push-footer.sticky-footer-enabled { display: block; }
+        
+
+
+          #tc-sn { width: 330px;}
+          .tc-sn-visible[class*=sn-left] #tc-page-wrap { left: 330px; }
+          .tc-sn-visible[class*=sn-right] #tc-page-wrap { right: 330px; }
+          [class*=sn-right].sn-close #tc-page-wrap, [class*=sn-left].sn-open #tc-page-wrap {
+            -webkit-transform: translate3d( 330px, 0, 0 );
+            -moz-transform: translate3d( 330px, 0, 0 );
+            transform: translate3d( 330px, 0, 0 );
+          }
+          [class*=sn-right].sn-open #tc-page-wrap, [class*=sn-left].sn-close #tc-page-wrap {
+            -webkit-transform: translate3d( -330px, 0, 0 );
+            -moz-transform: translate3d( -330px, 0, 0 );
+             transform: translate3d( -330px, 0, 0 );
+          }
+          /* stick the sticky header to the left/right of the page wrapper */
+          .tc-sticky-header.tc-sn-visible:not(.animating)[class*=sn-left] .tc-header { left: 330px; }
+          .tc-sticky-header.tc-sn-visible:not(.animating)[class*=sn-right] .tc-header { right: 330px; }
+          /* ie<9 breaks using :not */
+          .no-csstransforms3d .tc-sticky-header.tc-sn-visible[class*=sn-left] .tc-header { left: 330px; }
+          .no-csstransforms3d .tc-sticky-header.tc-sn-visible[class*=sn-right] .tc-header { right: 330px; }
+      
+</style>
+<link rel="stylesheet" id="customizr-style-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/style(4).css" type="text/css" media="all">
+<link rel="stylesheet" id="fancyboxcss-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/jquery.fancybox-1.3.4.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="social-logos-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/social-logos.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/jetpack.css" type="text/css" media="all">
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>-->
+<!--<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/plugins/jetpack/_inc/build/related-posts/related-posts.min.js?ver=20150408"></script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/plugins/xmltree/xmltree.js?ver=372e713033282abae4a657fde8944aa8"></script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/themes/customizr-pro/assets/front/js/libs/fancybox/jquery.fancybox-1.3.4.min.js?ver=2.1.8"></script>-->
+<!--<script type="text/javascript">
+/* <![CDATA[ */
+var TCParams = {"_disabled":[],"FancyBoxState":"1","FancyBoxAutoscale":"1","SliderName":"","SliderDelay":"","SliderHover":"1","centerSliderImg":"1","SmoothScroll":{"Enabled":true,"Options":{"touchpadSupport":false}},"anchorSmoothScroll":"linear","anchorSmoothScrollExclude":{"simple":["[class*=edd]",".tc-carousel-control",".carousel-control","[data-toggle=\"modal\"]","[data-toggle=\"dropdown\"]","[data-toggle=\"tooltip\"]","[data-toggle=\"popover\"]","[data-toggle=\"collapse\"]","[data-toggle=\"tab\"]","[data-toggle=\"pill\"]","[class*=upme]","[class*=um-]"],"deep":{"classes":[],"ids":[]}},"ReorderBlocks":"1","centerAllImg":"1","HasComments":"","LeftSidebarClass":".span3.left.tc-sidebar","RightSidebarClass":".span3.right.tc-sidebar","LoadModernizr":"1","stickyCustomOffset":{"_initial":0,"_scrolling":0,"options":{"_static":true,"_element":""}},"stickyHeader":"1","dropdowntoViewport":"","timerOnScrollAllBrowsers":"1","extLinksStyle":"","extLinksTargetExt":"","extLinksSkipSelectors":{"classes":["btn","button"],"ids":[]},"dropcapEnabled":"","dropcapWhere":{"post":"","page":""},"dropcapMinWords":"50","dropcapSkipSelectors":{"tags":["IMG","IFRAME","H1","H2","H3","H4","H5","H6","BLOCKQUOTE","UL","OL"],"classes":["btn","tc-placeholder-wrap"],"id":[]},"imgSmartLoadEnabled":"1","imgSmartLoadOpts":{"parentSelectors":[".article-container",".__before_main_wrapper",".widget-front"],"opts":{"excludeImg":[".tc-holder-img"]}},"imgSmartLoadsForSliders":"1","goldenRatio":"1.618","gridGoldenRatioLimit":"350","isSecondMenuEnabled":"","secondMenuRespSet":"in-sn-before","isParallaxOn":"1","parallaxRatio":"0.55","pluginCompats":[],"adminAjaxUrl":"https:\/\/bytefreaks.net\/wp-admin\/admin-ajax.php","ajaxUrl":"https:\/\/bytefreaks.net\/?czrajax=1","frontNonce":{"id":"CZRFrontNonce","handle":"e56e5fa4cc"},"isDevMode":"","isModernStyle":"","i18n":{"Permanently dismiss":"Permanently dismiss"},"frontNotifications":{"styleSwitcher":{"enabled":false,"content":"","dismissAction":"dismiss_style_switcher_note_front","ajaxUrl":"https:\/\/bytefreaks.net\/wp-admin\/admin-ajax.php"}}};
+/* ]]> */
+</script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/themes/customizr-pro/inc/assets/js/tc-scripts.min.js?ver=2.1.8"></script>-->
+<link rel="https://api.w.org/" href="https://bytefreaks.net/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bytefreaks.net/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://bytefreaks.net/wp-includes/wlwmanifest.xml">
+<link rel="prev" title="How does the expression, “*pointer++” evaluate?" href="https://bytefreaks.net/programming-2/c/how-does-the-expression-pointer-evaluate">
+<link rel="next" title="How does ‘git pull’ and ‘git fetch’ differ?" href="https://bytefreaks.net/applications/how-does-git-pull-and-git-fetch-differ">
+<link rel="canonical" href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function">
+<link rel="shortlink" href="https://bytefreaks.net/?p=3284">
+<link rel="alternate" type="application/json+oembed" href="https://bytefreaks.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbytefreaks.net%2Fprogramming-2%2Fc%2Fc-undefined-reference-to-templated-class-function">
+<link rel="alternate" type="text/xml+oembed" href="https://bytefreaks.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbytefreaks.net%2Fprogramming-2%2Fc%2Fc-undefined-reference-to-templated-class-function&amp;format=xml">
+<meta name="generator" content="WPML ver:4.0.7 stt:1,13;">
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<link rel="dns-prefetch" href="https://jetpack.wordpress.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://public-api.wordpress.com/">
+<link rel="dns-prefetch" href="https://0.gravatar.com/">
+<link rel="dns-prefetch" href="https://1.gravatar.com/">
+<link rel="dns-prefetch" href="https://2.gravatar.com/">
+<link rel="dns-prefetch" href="https://i0.wp.com/">
+<link rel="dns-prefetch" href="https://i1.wp.com/">
+<link rel="dns-prefetch" href="https://i2.wp.com/">
+<!--<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="text/javascript"></script>-->
+<!--<script type="text/javascript">
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-7630391784301248",
+          enable_page_level_ads: true
+     });
+</script>-->
+<style type="text/css">
+				html:not( .jetpack-lazy-images-js-enabled ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+<!--<script type="text/javascript">
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script>-->
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++: “undefined reference to” templated class function">
+<meta property="og:url" content="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function">
+<meta property="og:description" content="In case you have a project where you use a templated class that is split in its own header (.h) and source (.cpp) files, if you compile the class, into an object file (.o), separately from the code…">
+<meta property="article:published_time" content="2017-04-07T10:57:51+00:00">
+<meta property="article:modified_time" content="2017-04-07T11:03:18+00:00">
+<meta property="og:site_name" content="Bytefreaks.net">
+<meta property="og:image" content="https://i2.wp.com/bytefreaks.net/wp-content/uploads/2017/03/Squirrel-5-Painting.jpg?fit=1200%2C806&amp;ssl=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="806">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:text:title" content="C++: “undefined reference to” templated class function">
+<meta name="twitter:image" content="https://i2.wp.com/bytefreaks.net/wp-content/uploads/2017/03/Squirrel-5-Painting.jpg?fit=1200%2C806&amp;ssl=1&amp;w=640">
+<meta name="twitter:card" content="summary_large_image">
+
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<link rel="icon" href="https://i2.wp.com/bytefreaks.net/wp-content/uploads/2018/03/cropped-George-Michael-%CE%9F%CE%BB%CF%85%CE%BC%CF%80%CE%B9%CE%AC%CE%B4%CE%B1-%CE%A0%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CE%AE%CF%82.png?fit=32%2C32&amp;ssl=1" sizes="32x32">
+<link rel="icon" href="https://i2.wp.com/bytefreaks.net/wp-content/uploads/2018/03/cropped-George-Michael-%CE%9F%CE%BB%CF%85%CE%BC%CF%80%CE%B9%CE%AC%CE%B4%CE%B1-%CE%A0%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CE%AE%CF%82.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://i2.wp.com/bytefreaks.net/wp-content/uploads/2018/03/cropped-George-Michael-%CE%9F%CE%BB%CF%85%CE%BC%CF%80%CE%B9%CE%AC%CE%B4%CE%B1-%CE%A0%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CE%BA%CE%AE%CF%82.png?fit=180%2C180&amp;ssl=1">
+<meta name="msapplication-TileImage" content="https://i2.wp.com/bytefreaks.net/wp-content/uploads/2018/03/cropped-George-Michael-Ολυμπιάδα-Πληροφορικής.png?fit=270%2C270&amp;ssl=1">
+<link rel="preload" as="script" href="https://stats.wp.com/e-201844.js"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/plugins/jetpack/_inc/build/sharedaddy/sharing.min.js?ver=6.6.1"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/plugins/akismet/_inc/form.js?ver=4.0.8"><link rel="preload" as="script" href="https://bytefreaks.net/wp-includes/js/wp-embed.min.js?ver=372e713033282abae4a657fde8944aa8"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/plugins/jetpack/_inc/build/lazy-images/js/lazy-images.min.js?ver=6.6.1"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/themes/customizr-pro/assets/front/js/libs/modernizr.min.js?ver=2.1.8"><link rel="preload" as="script" href="https://bytefreaks.net/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4"><link rel="preload" as="script" href="https://bytefreaks.net/wp-includes/js/comment-reply.min.js?ver=372e713033282abae4a657fde8944aa8"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/plugins/wp-polls/polls-js.js?ver=2.73.8"><link rel="preload" as="script" href="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201844"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/plugins/csv-kml//code.js?ver=1"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20130122"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/themes/customizr-pro/addons/wfc/front/assets/js/font-customizer-front.min.js?ver=3.0.5"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0.9b"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b"><link rel="preload" as="script" href="https://www.google.com.cy/coop/cse/brand?form=cse-search-box&amp;lang=en"><link rel="preload" as="script" href="https://www.google.com.cy/coop/cse/brand?form=cse-search-box&amp;lang=en"><link rel="preload" as="script" href="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/themes/customizr-pro/inc/assets/js/tc-scripts.min.js?ver=2.1.8"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/themes/customizr-pro/assets/front/js/libs/fancybox/jquery.fancybox-1.3.4.min.js?ver=2.1.8"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/plugins/xmltree/xmltree.js?ver=372e713033282abae4a657fde8944aa8"><link rel="preload" as="script" href="https://bytefreaks.net/wp-content/plugins/jetpack/_inc/build/related-posts/related-posts.min.js?ver=20150408"><link rel="preload" as="script" href="https://bytefreaks.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"><link rel="preload" as="script" href="https://bytefreaks.net/wp-includes/js/jquery/jquery.js?ver=1.12.4"></head>
+<body class="post-template-default single single-post postid-3284 single-format-standard tc-fade-hover-links tc-r-sidebar tc-center-images skin-green tc-sticky-header sticky-disabled tc-transparent-on-scroll no-navbar tc-side-menu tc-sticky-footer sn-right-mc_slide_along mc_page_push">
+<nav id="tc-sn" class="tc-sn navbar" role="navigation">
+<div class="tc-sn-inner nav-collapse">
+<div class="btn-toggle-nav sn-toggle pull-right"><button type="button" class="btn menu-btn" title="Close" aria-label="Close"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button></div><div class="sn-nav-wrapper"><div class="menu-primary-menu-container"><ul id="menu-primary-menu" class="nav sn-nav"><li id="menu-item-817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-817"><a href="https://bytefreaks.net/">Home</a></li>
+<li id="menu-item-820" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-820"><a href="https://bytefreaks.net/category/applications">Applications <strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li id="menu-item-821" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-821"><a href="https://bytefreaks.net/category/applications/cms">CMS</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-822"><a href="https://bytefreaks.net/category/applications/firefox">FireFox</a></li>
+<li id="menu-item-823" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-823"><a href="https://bytefreaks.net/category/applications/hpl">HPL</a></li>
+<li id="menu-item-824" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-824"><a href="https://bytefreaks.net/category/applications/office">Office</a></li>
+<li id="menu-item-825" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-825"><a href="https://bytefreaks.net/category/applications/virtualization">Virtualization</a></li>
+</ul>
+</li>
+<li id="menu-item-826" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-826"><a href="https://bytefreaks.net/category/cyprus-computer-society">Cyprus Computer Society <strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li id="menu-item-827" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-827"><a href="https://bytefreaks.net/category/cyprus-computer-society/pspo">PSPO</a></li>
+</ul>
+</li>
+<li id="menu-item-828" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-828"><a href="https://bytefreaks.net/category/events">Events <strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li id="menu-item-829" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-829"><a href="https://bytefreaks.net/category/events/competitions">Competitions</a></li>
+</ul>
+</li>
+<li id="menu-item-830" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-830"><a href="https://bytefreaks.net/category/funny">Funny</a></li>
+<li id="menu-item-831" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-831"><a href="https://bytefreaks.net/category/gnulinux">GNU/Linux <strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li id="menu-item-832" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-832"><a href="https://bytefreaks.net/category/gnulinux/bash">Bash</a></li>
+</ul>
+</li>
+<li id="menu-item-833" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-833"><a href="https://bytefreaks.net/category/howtos">HowTos</a></li>
+<li id="menu-item-834" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-834"><a href="https://bytefreaks.net/category/ieee">IEEE <strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li id="menu-item-835" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-835"><a href="https://bytefreaks.net/category/ieee/xtreme">xtreme</a></li>
+</ul>
+</li>
+<li id="menu-item-836" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-836"><a href="https://bytefreaks.net/category/other">Other</a></li>
+<li id="menu-item-837" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-837"><a href="https://bytefreaks.net/category/other/jobs">Jobs</a></li>
+<li id="menu-item-838" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-838"><a href="https://bytefreaks.net/category/photography">Photography</a></li>
+<li id="menu-item-839" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children dropdown menu-item-839"><a href="https://bytefreaks.net/category/programming-2">Programming <strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li id="menu-item-840" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-840"><a href="https://bytefreaks.net/category/programming-2/c-programming-2">C</a></li>
+<li id="menu-item-841" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-841"><a href="https://bytefreaks.net/category/programming-2/c">C++</a></li>
+<li id="menu-item-842" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-842"><a href="https://bytefreaks.net/category/programming-2/java">Java</a></li>
+<li id="menu-item-843" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-843"><a href="https://bytefreaks.net/category/programming-2/php-programming-2">PHP</a></li>
+<li id="menu-item-844" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-844"><a href="https://bytefreaks.net/category/programming-2/sql">SQL</a></li>
+</ul>
+</li>
+<li id="menu-item-845" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-845"><a href="https://bytefreaks.net/category/uncategorized">Uncategorized</a></li>
+<li id="menu-item-846" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-846"><a href="https://bytefreaks.net/category/university-of-cyprus">University of Cyprus <strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li id="menu-item-847" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-847"><a href="https://bytefreaks.net/category/university-of-cyprus/student-branch">Student Branch</a></li>
+<li id="menu-item-848" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-848"><a href="https://bytefreaks.net/category/university-of-cyprus/student-clubs">Student Clubs</a></li>
+</ul>
+</li>
+<br><li class="menu-item">Languages<ul class="dropdown-menu"><li class="menu-item"><a href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function"><img src="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/en.png" height="12" alt="en" width="18"> English</a></li><li class="menu-item"><a href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function?lang=el"><img src="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/el.png" height="12" alt="el" width="18"> Ελληνικα</a></li></ul></li></ul></div></div> </div>
+</nav>
+<div id="tc-page-wrap" class="">
+<header class="tc-header clearfix row-fluid tc-tagline-off tc-title-logo-on  tc-shrink-on tc-menu-on logo-left tc-second-menu-in-sn-before-when-mobile" role="banner">
+<div class="brand span3 pull-left">
+<a class="site-logo" href="https://bytefreaks.net/" title="Bytefreaks.net | Bytefreaks.net – a place for hacks"><img src="https://i1.wp.com/bytefreaks.net/wp-content/uploads/2018/03/cropped-ByteFreaks.net_.png?fit=774%2C310&amp;ssl=1" alt="Back Home" width="774" height="310" style="max-width:250px;max-height:100px" data-no-retina="" class=" attachment-4413"></a> </div> 
+<div class="container outside"><h2 class="site-description">Bytefreaks.net – a place for hacks</h2></div> <div class="navbar-wrapper clearfix span9">
+<div class="navbar resp">
+<div class="navbar-inner" role="navigation">
+<div class="row-fluid">
+<div class="social-block span5"><div class="social-links"><a rel="nofollow" class="social-icon icon-feed" title="Subscribe to my rss feed" aria-label="Subscribe to my rss feed" href="https://bytefreaks.net/feed/rss" target="_blank"><i class="fas fa-rss"></i></a><a rel="nofollow" class="social-icon icon-google" title="Follow us on Google Play" aria-label="Follow us on Google Play" href="https://play.google.com/store/apps/developer?id=George+Michael" target="_blank"><i class="fab fa-google"></i></a><a rel="nofollow" class="social-icon icon-instagram" title="Follow me on Instagram" aria-label="Follow me on Instagram" href="https://www.instagram.com/maritsouitheexplorer/" target="_blank"><i class="fab fa-instagram"></i></a><a rel="nofollow" class="social-icon icon-youtube" title="Follow me on Youtube" aria-label="Follow me on Youtube" href="https://www.youtube.com/channel/UCe53zUdIBKtF3pXoGJId8Og" target="_blank"><i class="fab fa-youtube"></i></a><a rel="nofollow" class="social-icon icon-apple" title="Follow us on Apple" aria-label="Follow us on Apple" href="https://itunes.apple.com/us/developer/george-michael/id1217129488" target="_blank"><i class="fab fa-apple"></i></a></div></div><h2 class="span7 inside site-description">Bytefreaks.net – a place for hacks</h2><div class="btn-toggle-nav sn-toggle pull-right"><button type="button" class="btn menu-btn" title="Open the menu" aria-label="Open the menu"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button></div> </div>
+</div>
+</div>
+</div>
+</header>
+<div id="tc-reset-margin-top" class="container-fluid" style="margin-top:103px"></div><div id="main-wrapper" class="container">
+<div class="tc-hot-crumble container" role="navigation"><div class="row"><div class="span12"><div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb"><span class="trail-begin"><a href="https://bytefreaks.net/" title="Bytefreaks.net" rel="home" class="trail-begin">Home</a></span> <span class="sep">»</span> <a href="https://bytefreaks.net/category/programming-2" title="Programming">Programming</a> <span class="sep">»</span> <a href="https://bytefreaks.net/category/programming-2/c" title="C++">C++</a> <span class="sep">»</span> <span class="trail-end">C++: “undefined reference to” templated class function</span></div></div></div></div>
+<div class="container" role="main">
+<div class="row column-content-wrapper">
+<div id="content" class="span9 article-container tc-gallery-style">
+<article id="post-3284" class="row-fluid post-3284 post type-post status-publish format-standard has-post-thumbnail hentry category-c tag-c tag-template tag-undefined-reference-to">
+<header class="entry-header">
+<h1 class="entry-title ">C++: “undefined reference to” templated class function</h1><div class="entry-meta"><a href="https://bytefreaks.net/2017/04/07" title="1:57 pm" rel="bookmark"><time class="entry-date updated" datetime="2017-04-07T13:57:51+00:00">7 Apr, 2017</time></a> &nbsp;in <a class="" href="https://bytefreaks.net/category/programming-2/c" title="View all posts in C++"> C++ </a>&nbsp;tagged <a class="" href="https://bytefreaks.net/tag/c" title="View all posts in C++"> C++ </a> / <a class="" href="https://bytefreaks.net/tag/template" title="View all posts in template"> template </a> / <a class="" href="https://bytefreaks.net/tag/undefined-reference-to" title="View all posts in undefined reference to"> undefined reference to </a> <span class="by-author"> by <span class="author vcard author_name"><a class="url fn n" href="https://bytefreaks.net/author/xeirwn" title="View all posts by George Michael" rel="author">George Michael</a></span></span> </div><hr class="featurette-divider __before_content"> </header>
+<section class="entry-content ">
+<p>In case you have a project where you use a templated class that is split in its own header (<code>.h</code>) and source (<code>.cpp</code>) files, if you compile the class, into an object file (<code>.o</code>), separately from the code that uses it, you will get the <code>undefined reference to</code> error at linking.</p>
+<p>Lets assume we have <code>Stack.cpp</code> and <code>Stack.h</code> which define a templated stack using vectors. And <code>main.cpp</code> that uses this class after including <code>Stack.h</code>.</p>
+<p>If you try to compile these files as mentioned above, one by one, later you will get a linking error saying <code>undefined reference to</code> for the methods of the class.</p>
+<p>The code in the template is not sufficient to instruct the compiler to produce the methods that are needed by <code>main.cpp</code> (e.g. <code>Stack&lt;int&gt;::push(...)</code> and <code>Stack&lt;string&gt;::push(...)</code>) as the compiler does not know, while compiling <code>Stack.cpp</code> by itself, the data types it should provide support for.</p>
+<p>The reason it allows you to compile these incomplete objects is the following:</p>
+<ul>
+<li><code>main.cpp</code>: the compiler will implicitly instantiate the template classes <code>Stack&lt;int&gt;</code> and <code>Stack&lt;string&gt;</code> because those particular instantiations are requested in <code>main.cpp</code>. Since the implementations of those member functions are not in <code>main.cpp</code>, nor in any header file included in <code>main.cpp</code> (particularly <code>Stack.h</code>), the compiler will not include complete versions of those functions in <code>main.o</code> and it will expect to find them in another object during linking.</li>
+<li><code>Stack.cpp</code>: the compiler won’t compile the instantiations of <code>Stack&lt;int&gt;</code> and <code>Stack&lt;string&gt;</code> neither as there are no implicit or explicit instantiations of them in <code>Stack.cpp</code> nor <code>Stack.h</code>.</li>
+</ul>
+<p>So in the end, neither of the <code>.o</code> files contain the actual implementations of <code>Stack&lt;int&gt;</code> and <code>Stack&lt;string&gt;</code> and the linking fails.</p>
+<h2>Solutions</h2>
+<h3>Solution 1 : Explicitly instantiate the template</h3>
+<p>At the end of <code>Stack.cpp</code>, you can explicitly instantiate all needed templates.<br>
+In our example we would add:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">template class Stack&lt;int&gt;;
+template class Stack&lt;std::string&gt;;
+
+</pre>
+<p>This will ensure that, when the compiler is compiling <code>Stack.cpp</code> that it will explicitly compile all the code needed for the <code>Stack&lt;int&gt;</code> and <code>Stack&lt;std::string&gt;</code> classes.</p>
+<p>Using this method, you should ensure that all the of the implementation is placed into one <code>.cpp</code> file and that the explicit instantation is placed after the definition of all the functions (for example, at the end of the file).</p>
+<p>A problem with this method is that it forces you to update the <code>Stack.cpp</code> file each time you want to add support for a new data type (or remove one).</p>
+<h3>Solution 2 : Move the implementation code into the header file</h3>
+<p>Move all the source code of <code>Stack.cpp</code> to <code>Stack.h</code>, and then delete <code>Stack.cpp</code>. Using this method you do not need to manually instantiate all possible data types that are needed and thus you do not need to modify code of the class. As a side-effect, if you use the header file in many other source files, it will compile the functions of the header file in each source. This can make compilation slower but it will not create any compilation/linking problems, as the linker will ignore the duplicate implementations.</p>
+<h3>Solution 3 : Move the implementation code into a new header file and include it in the original header file</h3>
+<p>Rename <code>Stack.cpp</code> to <code>Stack_impl.h</code>, and then include <code>Stack_impl.h</code> from <code>Stack.h</code> to keep the implementation in a separate file from the declaration. This method will behave exactly like <code>Solution 2</code>.</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li><a href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function#" class="sharing-anchor sd-button share-more"><span>Share</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button share-icon" href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button share-icon" href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-end"></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-3284" class="share-facebook sd-button share-icon" href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-reddit"><a rel="nofollow noopener noreferrer" data-shared="" class="share-reddit sd-button share-icon" href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-end"></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-3284" class="share-twitter sd-button share-icon" href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-end"></li></ul></div></div></div></div></div>
+<div id="jp-relatedposts" class="jp-relatedposts">
+<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div><p class="wpml-ls-statics-post_translations wpml-ls">This post is also available in:
+<span class="wpml-ls-slot-post_translations wpml-ls-item wpml-ls-item-el wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-post-translations"><a href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function?lang=el" class="wpml-ls-link"><span class="wpml-ls-display icl_lang_sel_translated">Greek</span></a></span></p> </section>
+</article>
+<div id="comments" class="comments-area">
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form id="commentform" class="comment-form">
+<iframe title="Comment Form" src="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/saved_resource.html" style="width:100%; height: 430px; border:0;" name="jetpack_remote_comment" class="jetpack_remote_comment" id="jetpack_remote_comment" sandbox="allow-same-origin allow-top-navigation allow-scripts allow-forms allow-popups"></iframe>
+<!--[if !IE]><!-->
+<!--<script type="text/javascript">
+						document.addEventListener('DOMContentLoaded', function () {
+							var commentForms = document.getElementsByClassName('jetpack_remote_comment');
+							for (var i = 0; i < commentForms.length; i++) {
+								commentForms[i].allowTransparency = false;
+								commentForms[i].scrolling = 'no';
+							}
+						});
+					</script>-->
+<!--<![endif]-->
+</form>
+</div>
+<input type="hidden" name="comment_parent" id="comment_parent" value="">
+<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p></div>
+<hr class="featurette-divider __after_loop">
+<nav id="nav-below" class="navigation" role="navigation">
+<h3 class="assistive-text">
+Post navigation </h3>
+<ul class="pager">
+<li class="previous">
+<span class="nav-previous">
+<a href="https://bytefreaks.net/programming-2/c/how-does-the-expression-pointer-evaluate" rel="prev"><span class="meta-nav">←</span> How does the expression, “*pointer++” evaluate?</a> </span>
+</li>
+<li class="next">
+<span class="nav-next">
+<a href="https://bytefreaks.net/applications/how-does-git-pull-and-git-fetch-differ" rel="next">How does ‘git pull’ and ‘git fetch’ differ? <span class="meta-nav">→</span></a> </span>
+</li>
+</ul>
+</nav>
+
+</div>
+<div class="span3 right tc-sidebar">
+<div id="right" class="widget-area" role="complementary">
+<aside class="social-block widget widget_social"><h3 class="widget-title">Social links</h3><div class="social-links"><a rel="nofollow" class="social-icon icon-feed" title="Subscribe to my rss feed" aria-label="Subscribe to my rss feed" href="https://bytefreaks.net/feed/rss" target="_blank"><i class="fas fa-rss"></i></a><a rel="nofollow" class="social-icon icon-google" title="Follow us on Google Play" aria-label="Follow us on Google Play" href="https://play.google.com/store/apps/developer?id=George+Michael" target="_blank"><i class="fab fa-google"></i></a><a rel="nofollow" class="social-icon icon-instagram" title="Follow me on Instagram" aria-label="Follow me on Instagram" href="https://www.instagram.com/maritsouitheexplorer/" target="_blank"><i class="fab fa-instagram"></i></a><a rel="nofollow" class="social-icon icon-youtube" title="Follow me on Youtube" aria-label="Follow me on Youtube" href="https://www.youtube.com/channel/UCe53zUdIBKtF3pXoGJId8Og" target="_blank"><i class="fab fa-youtube"></i></a><a rel="nofollow" class="social-icon icon-apple" title="Follow us on Apple" aria-label="Follow us on Apple" href="https://itunes.apple.com/us/developer/george-michael/id1217129488" target="_blank"><i class="fab fa-apple"></i></a></div></aside><aside id="icl_lang_sel_widget-3" class="widget widget_icl_lang_sel_widget"><h3 class="widget-title">Languages</h3>
+<div class="lang_sel_list_vertical wpml-ls-sidebars-right wpml-ls wpml-ls-legacy-list-vertical" id="lang_sel_list">
+<ul>
+<li class="icl-en wpml-ls-slot-right wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-list-vertical">
+<a href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function" class="wpml-ls-link"><img class="wpml-ls-flag iclflag" src="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/en.png" alt="en" title="English"><span class="wpml-ls-native icl_lang_sel_native">English</span></a>
+</li>
+<li class="icl-el wpml-ls-slot-right wpml-ls-item wpml-ls-item-el wpml-ls-last-item wpml-ls-item-legacy-list-vertical">
+<a href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function?lang=el" class="wpml-ls-link"><img class="wpml-ls-flag iclflag" src="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/el.png" alt="el" title="Ελληνικα"><span class="wpml-ls-native icl_lang_sel_native">Ελληνικα</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Greek<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+</li>
+</ul>
+</div></aside><aside id="google_for_me_widget-6" class="widget widget_google_for_me_widget"><h3 class="widget-title">Google Search</h3>
+<form action="https://bytefreaks.net/results" id="cse-search-box">
+<div>
+<input type="hidden" name="cx" value="partner-pub-7630391784301248:1190973435">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="text" name="q" size="30">
+<input type="submit" name="sa" value="Search">
+</div>
+</form>
+<!--<script type="text/javascript" src="https://www.google.com.cy/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>-->
+</aside> <aside id="recent-posts-4" class="widget widget_recent_entries"> <h3 class="widget-title">Most Recent Posts</h3> <ul>
+<li>
+<a href="https://bytefreaks.net/applications/how-to-create-a-video-from-an-audio-file-and-an-image-using-ffmpeg">How to create a video from an audio file and an image using ffmpeg</a>
+</li>
+<li>
+<a href="https://bytefreaks.net/applications/how-we-concatenate-multiple-mp3-files-into-one-using-ffmpeg">How we concatenate multiple mp3 files into one using ffmpeg</a>
+</li>
+<li>
+<a href="https://bytefreaks.net/applications/root-checker-privacy-policy">Root Checker – Privacy Policy</a>
+</li>
+<li>
+<a href="https://bytefreaks.net/ieee/ieee-region-8-belgrade-meeting-2018-mobile-application-privacy-policy">IEEE Region 8 – Belgrade Meeting 2018 Mobile Application – Privacy Policy</a>
+</li>
+<li>
+<a href="https://bytefreaks.net/applications/office/libreoffice-calc-get-workbook-path-only">LibreOffice Calc: Get workbook path only</a>
+</li>
+</ul>
+</aside> </div>
+</div>
+</div>
+</div>
+<div id="tc-push-footer"></div>
+</div>
+
+<footer id="footer" class="">
+<div class="container footer-widgets ">
+<div class="row widget-area" role="complementary">
+<div id="footer_one" class="span4">
+<aside id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories:</h3> <ul>
+<li class="cat-item cat-item-869"><a href="https://bytefreaks.net/category/android">Android</a> (8)
+</li>
+<li class="cat-item cat-item-80"><a href="https://bytefreaks.net/category/applications">Applications</a> (103)
+<ul class="children">
+<li class="cat-item cat-item-591"><a href="https://bytefreaks.net/category/applications/bluetooth-clicker">Bluetooth Clicker</a> (1)
+</li>
+<li class="cat-item cat-item-120"><a href="https://bytefreaks.net/category/applications/cms">CMS</a> (5)
+</li>
+<li class="cat-item cat-item-563"><a href="https://bytefreaks.net/category/applications/contest-management-system">Contest Management System</a> (4)
+</li>
+<li class="cat-item cat-item-1586"><a href="https://bytefreaks.net/category/applications/docker">Docker</a> (4)
+</li>
+<li class="cat-item cat-item-611"><a href="https://bytefreaks.net/category/applications/face-recognition">Face Recognition</a> (3)
+</li>
+<li class="cat-item cat-item-235"><a href="https://bytefreaks.net/category/applications/firefox">FireFox</a> (2)
+</li>
+<li class="cat-item cat-item-596"><a href="https://bytefreaks.net/category/applications/gnuplot">GnuPlot</a> (2)
+</li>
+<li class="cat-item cat-item-238"><a href="https://bytefreaks.net/category/applications/hpl">HPL</a> (1)
+</li>
+<li class="cat-item cat-item-781"><a href="https://bytefreaks.net/category/applications/imagemagick">ImageMagick</a> (1)
+</li>
+<li class="cat-item cat-item-1200"><a href="https://bytefreaks.net/category/applications/latex">Latex</a> (1)
+</li>
+<li class="cat-item cat-item-1385"><a href="https://bytefreaks.net/category/applications/modem-inspector">Modem Inspector</a> (1)
+</li>
+<li class="cat-item cat-item-772"><a href="https://bytefreaks.net/category/applications/notepad">NotePad++</a> (2)
+</li>
+<li class="cat-item cat-item-239"><a href="https://bytefreaks.net/category/applications/office">Office</a> (9)
+</li>
+<li class="cat-item cat-item-760"><a href="https://bytefreaks.net/category/applications/oracle">Oracle</a> (2)
+</li>
+<li class="cat-item cat-item-727"><a href="https://bytefreaks.net/category/applications/skype">Skype</a> (1)
+</li>
+<li class="cat-item cat-item-620"><a href="https://bytefreaks.net/category/applications/stikked">Stikked</a> (1)
+</li>
+<li class="cat-item cat-item-81"><a href="https://bytefreaks.net/category/applications/virtualization">Virtualization</a> (9)
+</li>
+<li class="cat-item cat-item-708"><a href="https://bytefreaks.net/category/applications/wordpress">WordPress</a> (6)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-890"><a href="https://bytefreaks.net/category/css">CSS</a> (1)
+</li>
+<li class="cat-item cat-item-60"><a href="https://bytefreaks.net/category/cyprus-computer-society">Cyprus Computer Society</a> (7)
+<ul class="children">
+<li class="cat-item cat-item-62"><a href="https://bytefreaks.net/category/cyprus-computer-society/pspo">PSPO</a> (2)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-61"><a href="https://bytefreaks.net/category/events">Events</a> (3)
+<ul class="children">
+<li class="cat-item cat-item-59"><a href="https://bytefreaks.net/category/events/competitions">Competitions</a> (2)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-49"><a href="https://bytefreaks.net/category/funny">Funny</a> (36)
+</li>
+<li class="cat-item cat-item-5"><a href="https://bytefreaks.net/category/gnulinux">GNU/Linux</a> (221)
+<ul class="children">
+<li class="cat-item cat-item-3"><a href="https://bytefreaks.net/category/gnulinux/bash">Bash</a> (135)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-902"><a href="https://bytefreaks.net/category/google">Google</a> (12)
+<ul class="children">
+<li class="cat-item cat-item-903"><a href="https://bytefreaks.net/category/google/hash-code">Hash Code</a> (11)
+<ul class="children">
+<li class="cat-item cat-item-904"><a href="https://bytefreaks.net/category/google/hash-code/google-hash-code-2017">2017</a> (7)
+</li>
+<li class="cat-item cat-item-1347"><a href="https://bytefreaks.net/category/google/hash-code/google-hash-code-2018">2018</a> (4)
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-4"><a href="https://bytefreaks.net/category/howtos">HowTos</a> (78)
+</li>
+<li class="cat-item cat-item-67"><a href="https://bytefreaks.net/category/ieee">IEEE</a> (13)
+<ul class="children">
+<li class="cat-item cat-item-68"><a href="https://bytefreaks.net/category/ieee/xtreme">xtreme</a> (4)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-672"><a href="https://bytefreaks.net/category/informatics-olympiads">Informatics Olympiads</a> (7)
+<ul class="children">
+<li class="cat-item cat-item-673"><a href="https://bytefreaks.net/category/informatics-olympiads/boi">Balkan Olympiad in Informatics</a> (4)
+<ul class="children">
+<li class="cat-item cat-item-674"><a href="https://bytefreaks.net/category/informatics-olympiads/boi/2016-cyprus">2016 Cyprus</a> (4)
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-48"><a href="https://bytefreaks.net/category/other">Other</a> (103)
+<ul class="children">
+<li class="cat-item cat-item-192"><a href="https://bytefreaks.net/category/other/jobs">Jobs</a> (58)
+<ul class="children">
+<li class="cat-item cat-item-733"><a href="https://bytefreaks.net/category/other/jobs/available-open-positions">Available / Open Positions</a> (8)
+</li>
+<li class="cat-item cat-item-307"><a href="https://bytefreaks.net/category/other/jobs/filledclosed-positions">Filled/Closed Positions</a> (50)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-288"><a href="https://bytefreaks.net/category/other/locations">Locations</a> (16)
+</li>
+<li class="cat-item cat-item-271"><a href="https://bytefreaks.net/category/other/presentation">Presentation</a> (2)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-94"><a href="https://bytefreaks.net/category/photography">Photography</a> (6)
+</li>
+<li class="cat-item cat-item-109"><a href="https://bytefreaks.net/category/programming-2">Programming</a> (100)
+<ul class="children">
+<li class="cat-item cat-item-165"><a href="https://bytefreaks.net/category/programming-2/c-programming-2">C</a> (45)
+</li>
+<li class="cat-item cat-item-111"><a href="https://bytefreaks.net/category/programming-2/c">C++</a> (31)
+</li>
+<li class="cat-item cat-item-755"><a href="https://bytefreaks.net/category/programming-2/elm">Elm</a> (8)
+</li>
+<li class="cat-item cat-item-158"><a href="https://bytefreaks.net/category/programming-2/java">Java</a> (14)
+</li>
+<li class="cat-item cat-item-1323"><a href="https://bytefreaks.net/category/programming-2/javascript">JavaScript</a> (1)
+</li>
+<li class="cat-item cat-item-222"><a href="https://bytefreaks.net/category/programming-2/php-programming-2">PHP</a> (3)
+</li>
+<li class="cat-item cat-item-186"><a href="https://bytefreaks.net/category/programming-2/sql">SQL</a> (4)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-787"><a href="https://bytefreaks.net/category/sierra-wireless">Sierra Wireless</a> (1)
+</li>
+<li class="cat-item cat-item-1"><a href="https://bytefreaks.net/category/uncategorized">Uncategorized</a> (7)
+</li>
+<li class="cat-item cat-item-72"><a href="https://bytefreaks.net/category/university-of-cyprus">University of Cyprus</a> (19)
+<ul class="children">
+<li class="cat-item cat-item-73"><a href="https://bytefreaks.net/category/university-of-cyprus/student-branch">Student Branch</a> (2)
+</li>
+<li class="cat-item cat-item-74"><a href="https://bytefreaks.net/category/university-of-cyprus/student-clubs">Student Clubs</a> (4)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-714"><a href="https://bytefreaks.net/category/windows">Windows</a> (9)
+</li>
+</ul>
+</aside>
+</div>
+<div id="footer_two" class="span4">
+<aside id="icl_lang_sel_widget-4" class="widget widget_icl_lang_sel_widget"><h3 class="widget-title">Languages</h3>
+<div class="lang_sel_list_vertical wpml-ls-sidebars-footer_two wpml-ls wpml-ls-legacy-list-vertical" id="lang_sel_list">
+<ul>
+<li class="icl-en wpml-ls-slot-footer_two wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-list-vertical">
+<a href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function" class="wpml-ls-link"><img class="wpml-ls-flag iclflag" src="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/en.png" alt="en" title="English"><span class="wpml-ls-native icl_lang_sel_native">English</span></a>
+</li>
+<li class="icl-el wpml-ls-slot-footer_two wpml-ls-item wpml-ls-item-el wpml-ls-last-item wpml-ls-item-legacy-list-vertical">
+<a href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function?lang=el" class="wpml-ls-link"><img class="wpml-ls-flag iclflag" src="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/el.png" alt="el" title="Ελληνικα"><span class="wpml-ls-native icl_lang_sel_native">Ελληνικα</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Greek<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+</li>
+</ul>
+</div></aside><aside id="tag_cloud-3" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="https://bytefreaks.net/tag/2017" class="tag-cloud-link tag-link-907 tag-link-position-1" style="font-size: 8.7446808510638pt;" aria-label="2017 (9 items)">2017</a>
+<a href="https://bytefreaks.net/tag/address" class="tag-cloud-link tag-link-320 tag-link-position-2" style="font-size: 12.617021276596pt;" aria-label="address (17 items)">address</a>
+<a href="https://bytefreaks.net/tag/applications" class="tag-cloud-link tag-link-121 tag-link-position-3" style="font-size: 9.936170212766pt;" aria-label="applications (11 items)">applications</a>
+<a href="https://bytefreaks.net/tag/athens" class="tag-cloud-link tag-link-349 tag-link-position-4" style="font-size: 9.3404255319149pt;" aria-label="athens (10 items)">athens</a>
+<a href="https://bytefreaks.net/tag/awk" class="tag-cloud-link tag-link-7 tag-link-position-5" style="font-size: 8.7446808510638pt;" aria-label="awk (9 items)">awk</a>
+<a href="https://bytefreaks.net/tag/bash" class="tag-cloud-link tag-link-13 tag-link-position-6" style="font-size: 21.851063829787pt;" aria-label="bash (74 items)">bash</a>
+<a href="https://bytefreaks.net/tag/c" class="tag-cloud-link tag-link-570 tag-link-position-7" style="font-size: 17.68085106383pt;" aria-label="C++ (39 items)">C++</a>
+<a href="https://bytefreaks.net/tag/centos" class="tag-cloud-link tag-link-762 tag-link-position-8" style="font-size: 11.723404255319pt;" aria-label="CentOS (15 items)">CentOS</a>
+<a href="https://bytefreaks.net/tag/cut" class="tag-cloud-link tag-link-249 tag-link-position-9" style="font-size: 8.7446808510638pt;" aria-label="cut (9 items)">cut</a>
+<a href="https://bytefreaks.net/tag/cyprus" class="tag-cloud-link tag-link-272 tag-link-position-10" style="font-size: 22pt;" aria-label="cyprus (77 items)">cyprus</a>
+<a href="https://bytefreaks.net/tag/extract" class="tag-cloud-link tag-link-171 tag-link-position-11" style="font-size: 8.7446808510638pt;" aria-label="extract (9 items)">extract</a>
+<a href="https://bytefreaks.net/tag/fedora" class="tag-cloud-link tag-link-42 tag-link-position-12" style="font-size: 15.595744680851pt;" aria-label="fedora (28 items)">fedora</a>
+<a href="https://bytefreaks.net/tag/ffmpeg" class="tag-cloud-link tag-link-324 tag-link-position-13" style="font-size: 10.978723404255pt;" aria-label="ffmpeg (13 items)">ffmpeg</a>
+<a href="https://bytefreaks.net/tag/find" class="tag-cloud-link tag-link-46 tag-link-position-14" style="font-size: 13.808510638298pt;" aria-label="find (21 items)">find</a>
+<a href="https://bytefreaks.net/tag/g" class="tag-cloud-link tag-link-110 tag-link-position-15" style="font-size: 8pt;" aria-label="g++ (8 items)">g++</a>
+<a href="https://bytefreaks.net/tag/git" class="tag-cloud-link tag-link-258 tag-link-position-16" style="font-size: 15.595744680851pt;" aria-label="git (28 items)">git</a>
+<a href="https://bytefreaks.net/tag/gnu-linux" class="tag-cloud-link tag-link-16 tag-link-position-17" style="font-size: 21.106382978723pt;" aria-label="GNU/Linux (67 items)">GNU/Linux</a>
+<a href="https://bytefreaks.net/tag/google" class="tag-cloud-link tag-link-866 tag-link-position-18" style="font-size: 12.170212765957pt;" aria-label="google (16 items)">google</a>
+<a href="https://bytefreaks.net/tag/greece" class="tag-cloud-link tag-link-348 tag-link-position-19" style="font-size: 9.3404255319149pt;" aria-label="greece (10 items)">greece</a>
+<a href="https://bytefreaks.net/tag/grep" class="tag-cloud-link tag-link-47 tag-link-position-20" style="font-size: 10.978723404255pt;" aria-label="grep (13 items)">grep</a>
+<a href="https://bytefreaks.net/tag/hash" class="tag-cloud-link tag-link-260 tag-link-position-21" style="font-size: 8.7446808510638pt;" aria-label="hash (9 items)">hash</a>
+<a href="https://bytefreaks.net/tag/hash-code" class="tag-cloud-link tag-link-906 tag-link-position-22" style="font-size: 9.936170212766pt;" aria-label="hash code (11 items)">hash code</a>
+<a href="https://bytefreaks.net/tag/howtos" class="tag-cloud-link tag-link-15 tag-link-position-23" style="font-size: 20.510638297872pt;" aria-label="howtos (60 items)">howtos</a>
+<a href="https://bytefreaks.net/tag/ieee" class="tag-cloud-link tag-link-69 tag-link-position-24" style="font-size: 10.382978723404pt;" aria-label="ieee (12 items)">ieee</a>
+<a href="https://bytefreaks.net/tag/informatics" class="tag-cloud-link tag-link-580 tag-link-position-25" style="font-size: 9.936170212766pt;" aria-label="Informatics (11 items)">Informatics</a>
+<a href="https://bytefreaks.net/tag/java" class="tag-cloud-link tag-link-159 tag-link-position-26" style="font-size: 12.170212765957pt;" aria-label="java (16 items)">java</a>
+<a href="https://bytefreaks.net/tag/job" class="tag-cloud-link tag-link-312 tag-link-position-27" style="font-size: 19.914893617021pt;" aria-label="Job (55 items)">Job</a>
+<a href="https://bytefreaks.net/tag/job-listing" class="tag-cloud-link tag-link-313 tag-link-position-28" style="font-size: 19.021276595745pt;" aria-label="job listing (48 items)">job listing</a>
+<a href="https://bytefreaks.net/tag/limassol" class="tag-cloud-link tag-link-276 tag-link-position-29" style="font-size: 18.276595744681pt;" aria-label="limassol (43 items)">limassol</a>
+<a href="https://bytefreaks.net/tag/map" class="tag-cloud-link tag-link-319 tag-link-position-30" style="font-size: 10.382978723404pt;" aria-label="map (12 items)">map</a>
+<a href="https://bytefreaks.net/tag/mysql" class="tag-cloud-link tag-link-183 tag-link-position-31" style="font-size: 10.382978723404pt;" aria-label="mysql (12 items)">mysql</a>
+<a href="https://bytefreaks.net/tag/nicosia" class="tag-cloud-link tag-link-289 tag-link-position-32" style="font-size: 13.510638297872pt;" aria-label="nicosia (20 items)">nicosia</a>
+<a href="https://bytefreaks.net/tag/olympiad" class="tag-cloud-link tag-link-579 tag-link-position-33" style="font-size: 9.3404255319149pt;" aria-label="Olympiad (10 items)">Olympiad</a>
+<a href="https://bytefreaks.net/tag/programming" class="tag-cloud-link tag-link-71 tag-link-position-34" style="font-size: 9.3404255319149pt;" aria-label="programming (10 items)">programming</a>
+<a href="https://bytefreaks.net/tag/ssh" class="tag-cloud-link tag-link-39 tag-link-position-35" style="font-size: 12.170212765957pt;" aria-label="ssh (16 items)">ssh</a>
+<a href="https://bytefreaks.net/tag/telephone" class="tag-cloud-link tag-link-321 tag-link-position-36" style="font-size: 11.723404255319pt;" aria-label="telephone (15 items)">telephone</a>
+<a href="https://bytefreaks.net/tag/telephone-number" class="tag-cloud-link tag-link-322 tag-link-position-37" style="font-size: 11.723404255319pt;" aria-label="telephone number (15 items)">telephone number</a>
+<a href="https://bytefreaks.net/tag/trading-point" class="tag-cloud-link tag-link-311 tag-link-position-38" style="font-size: 19.021276595745pt;" aria-label="Trading Point (48 items)">Trading Point</a>
+<a href="https://bytefreaks.net/tag/trading-point-of-financial-instruments" class="tag-cloud-link tag-link-310 tag-link-position-39" style="font-size: 19.021276595745pt;" aria-label="Trading Point of Financial Instruments (48 items)">Trading Point of Financial Instruments</a>
+<a href="https://bytefreaks.net/tag/ubuntu" class="tag-cloud-link tag-link-35 tag-link-position-40" style="font-size: 13.808510638298pt;" aria-label="ubuntu (21 items)">ubuntu</a>
+<a href="https://bytefreaks.net/tag/vacancy" class="tag-cloud-link tag-link-314 tag-link-position-41" style="font-size: 19.021276595745pt;" aria-label="vacancy (48 items)">vacancy</a>
+<a href="https://bytefreaks.net/tag/video" class="tag-cloud-link tag-link-328 tag-link-position-42" style="font-size: 8.7446808510638pt;" aria-label="video (9 items)">video</a>
+<a href="https://bytefreaks.net/tag/wifi" class="tag-cloud-link tag-link-323 tag-link-position-43" style="font-size: 11.425531914894pt;" aria-label="wifi (14 items)">wifi</a>
+<a href="https://bytefreaks.net/tag/xm" class="tag-cloud-link tag-link-663 tag-link-position-44" style="font-size: 17.829787234043pt;" aria-label="xm (40 items)">xm</a>
+<a href="https://bytefreaks.net/tag/xm-com" class="tag-cloud-link tag-link-664 tag-link-position-45" style="font-size: 17.829787234043pt;" aria-label="xm.com (40 items)">xm.com</a></div>
+</aside><aside id="pages-2" class="widget widget_pages"><h3 class="widget-title">Pages</h3> <ul>
+<li class="page_item page-item-2"><a href="https://bytefreaks.net/about-us">About Us</a></li>
+<li class="page_item page-item-3734"><a href="https://bytefreaks.net/bb-code-computer">Blackberry code computer</a></li>
+<li class="page_item page-item-4503"><a href="https://bytefreaks.net/csv-to-kml-cell-site-map">CSV to KML Cell Site Map</a></li>
+<li class="page_item page-item-1319"><a href="https://bytefreaks.net/epoch">Epoch</a></li>
+<li class="page_item page-item-1663"><a href="https://bytefreaks.net/random-password-generator">Random Password Generator</a></li>
+<li class="page_item page-item-1145"><a href="https://bytefreaks.net/results">Results</a></li>
+<li class="page_item page-item-956"><a href="https://bytefreaks.net/sitemap">Sitemap</a></li>
+<li class="page_item page-item-951"><a href="https://bytefreaks.net/what-is-my-ip">What is my IP ?</a></li>
+<li class="page_item page-item-3862"><a href="https://bytefreaks.net/xml-tree-visualizer">XML Tree Visualizer</a></li>
+</ul>
+</aside><aside id="google_for_me_widget-5" class="widget widget_google_for_me_widget"><h3 class="widget-title">Google Search</h3>
+<form action="https://bytefreaks.net/results" id="cse-search-box">
+<div>
+<input type="hidden" name="cx" value="partner-pub-7630391784301248:1190973435">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="text" name="q" size="30">
+<input type="submit" name="sa" value="Search">
+</div>
+</form>
+<!--<script type="text/javascript" src="https://www.google.com.cy/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>-->
+</aside>
+</div>
+<div id="footer_three" class="span4">
+<aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3> <ul>
+<li><a href="https://bytefreaks.net/2018/11">November 2018</a></li>
+<li><a href="https://bytefreaks.net/2018/10">October 2018</a></li>
+<li><a href="https://bytefreaks.net/2018/09">September 2018</a></li>
+<li><a href="https://bytefreaks.net/2018/08">August 2018</a></li>
+<li><a href="https://bytefreaks.net/2018/07">July 2018</a></li>
+<li><a href="https://bytefreaks.net/2018/06">June 2018</a></li>
+<li><a href="https://bytefreaks.net/2018/05">May 2018</a></li>
+<li><a href="https://bytefreaks.net/2018/04">April 2018</a></li>
+<li><a href="https://bytefreaks.net/2018/03">March 2018</a></li>
+<li><a href="https://bytefreaks.net/2018/02">February 2018</a></li>
+<li><a href="https://bytefreaks.net/2018/01">January 2018</a></li>
+<li><a href="https://bytefreaks.net/2017/12">December 2017</a></li>
+<li><a href="https://bytefreaks.net/2017/11">November 2017</a></li>
+<li><a href="https://bytefreaks.net/2017/10">October 2017</a></li>
+<li><a href="https://bytefreaks.net/2017/09">September 2017</a></li>
+<li><a href="https://bytefreaks.net/2017/08">August 2017</a></li>
+<li><a href="https://bytefreaks.net/2017/07">July 2017</a></li>
+<li><a href="https://bytefreaks.net/2017/06">June 2017</a></li>
+<li><a href="https://bytefreaks.net/2017/05">May 2017</a></li>
+<li><a href="https://bytefreaks.net/2017/04">April 2017</a></li>
+<li><a href="https://bytefreaks.net/2017/03">March 2017</a></li>
+<li><a href="https://bytefreaks.net/2017/02">February 2017</a></li>
+<li><a href="https://bytefreaks.net/2017/01">January 2017</a></li>
+<li><a href="https://bytefreaks.net/2016/12">December 2016</a></li>
+<li><a href="https://bytefreaks.net/2016/11">November 2016</a></li>
+<li><a href="https://bytefreaks.net/2016/10">October 2016</a></li>
+<li><a href="https://bytefreaks.net/2016/09">September 2016</a></li>
+<li><a href="https://bytefreaks.net/2016/08">August 2016</a></li>
+<li><a href="https://bytefreaks.net/2016/07">July 2016</a></li>
+<li><a href="https://bytefreaks.net/2016/06">June 2016</a></li>
+<li><a href="https://bytefreaks.net/2016/05">May 2016</a></li>
+<li><a href="https://bytefreaks.net/2016/04">April 2016</a></li>
+<li><a href="https://bytefreaks.net/2016/03">March 2016</a></li>
+<li><a href="https://bytefreaks.net/2016/02">February 2016</a></li>
+<li><a href="https://bytefreaks.net/2016/01">January 2016</a></li>
+<li><a href="https://bytefreaks.net/2015/12">December 2015</a></li>
+<li><a href="https://bytefreaks.net/2015/11">November 2015</a></li>
+<li><a href="https://bytefreaks.net/2015/08">August 2015</a></li>
+<li><a href="https://bytefreaks.net/2015/07">July 2015</a></li>
+<li><a href="https://bytefreaks.net/2015/06">June 2015</a></li>
+<li><a href="https://bytefreaks.net/2015/03">March 2015</a></li>
+<li><a href="https://bytefreaks.net/2015/01">January 2015</a></li>
+<li><a href="https://bytefreaks.net/2014/12">December 2014</a></li>
+<li><a href="https://bytefreaks.net/2014/11">November 2014</a></li>
+<li><a href="https://bytefreaks.net/2014/10">October 2014</a></li>
+<li><a href="https://bytefreaks.net/2013/10">October 2013</a></li>
+<li><a href="https://bytefreaks.net/2013/06">June 2013</a></li>
+<li><a href="https://bytefreaks.net/2013/04">April 2013</a></li>
+<li><a href="https://bytefreaks.net/2013/02">February 2013</a></li>
+<li><a href="https://bytefreaks.net/2012/12">December 2012</a></li>
+<li><a href="https://bytefreaks.net/2012/11">November 2012</a></li>
+<li><a href="https://bytefreaks.net/2012/04">April 2012</a></li>
+<li><a href="https://bytefreaks.net/2012/03">March 2012</a></li>
+<li><a href="https://bytefreaks.net/2012/02">February 2012</a></li>
+<li><a href="https://bytefreaks.net/2012/01">January 2012</a></li>
+<li><a href="https://bytefreaks.net/2011/11">November 2011</a></li>
+<li><a href="https://bytefreaks.net/2011/10">October 2011</a></li>
+<li><a href="https://bytefreaks.net/2011/09">September 2011</a></li>
+<li><a href="https://bytefreaks.net/2011/07">July 2011</a></li>
+<li><a href="https://bytefreaks.net/2004/05">May 2004</a></li>
+</ul>
+</aside>
+</div>
+</div>
+</div>
+<div class="colophon">
+<div class="container">
+<div class="row-fluid">
+<div class="span3 social-block pull-left"><span class="social-links"><a rel="nofollow" class="social-icon icon-feed" title="Subscribe to my rss feed" aria-label="Subscribe to my rss feed" href="https://bytefreaks.net/feed/rss" target="_blank"><i class="fas fa-rss"></i></a><a rel="nofollow" class="social-icon icon-google" title="Follow us on Google Play" aria-label="Follow us on Google Play" href="https://play.google.com/store/apps/developer?id=George+Michael" target="_blank"><i class="fab fa-google"></i></a><a rel="nofollow" class="social-icon icon-instagram" title="Follow me on Instagram" aria-label="Follow me on Instagram" href="https://www.instagram.com/maritsouitheexplorer/" target="_blank"><i class="fab fa-instagram"></i></a><a rel="nofollow" class="social-icon icon-youtube" title="Follow me on Youtube" aria-label="Follow me on Youtube" href="https://www.youtube.com/channel/UCe53zUdIBKtF3pXoGJId8Og" target="_blank"><i class="fab fa-youtube"></i></a><a rel="nofollow" class="social-icon icon-apple" title="Follow us on Apple" aria-label="Follow us on Apple" href="https://itunes.apple.com/us/developer/george-michael/id1217129488" target="_blank"><i class="fab fa-apple"></i></a></span></div><div class="span6 credits"><p>· <span class="fc-copyright"><span class="fc-copyright-text">© 2016</span> <a class="fc-copyright-link" href="https://bytefreaks.net/" title="a Bytefreaks Web Portal" rel="bookmark" target="_self">a Bytefreaks Web Portal</a></span> ·</p></div> </div>
+</div>
+</div>
+</footer>
+</div>
+<!--<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/bytefreaks.net\/programming-2\/c\/c-undefined-reference-to-templated-class-function":3284};
+	</script>-->
+<div id="sharing_email" style="display: none;">
+<form action="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function" method="post">
+<label for="target_email">Send to Email Address</label>
+<input type="email" name="target_email" id="target_email" value="">
+<label for="source_name">Your Name</label>
+<input type="text" name="source_name" id="source_name" value="">
+<label for="source_email">Your Email Address</label>
+<input type="email" name="source_email" id="source_email" value="">
+<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" title="This field is for validation and should not be changed">
+<img style="float: right; display: none" class="loading" src="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/loading.gif" alt="loading" width="16" height="16">
+<input type="submit" value="Send Email" class="sharing_send">
+<a rel="nofollow" href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function#cancel" class="sharing_cancel">Cancel</a>
+<div class="errors errors-1" style="display: none;">
+Post was not sent - check your email addresses! </div>
+<div class="errors errors-2" style="display: none;">
+Email check failed, please try again </div>
+<div class="errors errors-3" style="display: none;">
+Sorry, your blog cannot share posts by email. </div>
+</form>
+</div>
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b"></script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0.9b"></script>-->
+<!--<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://bytefreaks.net/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://bytefreaks.net/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>-->
+<div class="wpml-ls-statics-footer wpml-ls wpml-ls-legacy-list-horizontal" id="lang_sel_footer">
+<ul><li class="wpml-ls-slot-footer wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-list-horizontal">
+<a href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function" class="wpml-ls-link"><img class="wpml-ls-flag iclflag" src="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/en.png" alt="en" title="English"><span class="wpml-ls-native icl_lang_sel_native">English</span></a>
+</li><li class="wpml-ls-slot-footer wpml-ls-item wpml-ls-item-el wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
+<a href="https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function?lang=el" class="wpml-ls-link"><img class="wpml-ls-flag iclflag" src="./C++_ “undefined reference to” templated class function – Bytefreaks.net_files/el.png" alt="el" title="Ελληνικα"><span class="wpml-ls-native icl_lang_sel_native">Ελληνικα</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Greek<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+</li></ul>
+</div><!--<script type="text/javascript">
+/* <![CDATA[ */
+var WfcFrontParams = {"effectsAndIconsSelectorCandidates":[],"wfcOptions":null};
+/* ]]> */
+</script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/themes/customizr-pro/addons/wfc/front/assets/js/font-customizer-front.min.js?ver=3.0.5"></script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20130122"></script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/plugins/csv-kml//code.js?ver=1"></script>-->
+<!--<script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201844"></script>-->
+<!--<script type="text/javascript">
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"https:\/\/bytefreaks.net\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/plugins/wp-polls/polls-js.js?ver=2.73.8"></script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-includes/js/comment-reply.min.js?ver=372e713033282abae4a657fde8944aa8"></script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4"></script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/themes/customizr-pro/assets/front/js/libs/modernizr.min.js?ver=2.1.8"></script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/plugins/jetpack/_inc/build/lazy-images/js/lazy-images.min.js?ver=6.6.1"></script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-includes/js/wp-embed.min.js?ver=372e713033282abae4a657fde8944aa8"></script>-->
+<!--<script async="async" type="text/javascript" src="https://bytefreaks.net/wp-content/plugins/akismet/_inc/form.js?ver=4.0.8"></script>-->
+<!--<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>-->
+<!--<script type="text/javascript" src="https://bytefreaks.net/wp-content/plugins/jetpack/_inc/build/sharedaddy/sharing.min.js?ver=6.6.1"></script>-->
+<!--<script type="text/javascript">
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+</script>-->
+<!--[if IE]>
+		<script type="text/javascript">
+			if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+				// window.location.reload() doesn't respect the Hash in IE
+				window.location.hash = window.location.hash;
+			}
+		</script>
+		<![endif]-->
+<!--<script type="text/javascript">
+			(function () {
+				var comm_par_el = document.getElementById( 'comment_parent' ),
+					comm_par = ( comm_par_el && comm_par_el.value ) ? comm_par_el.value : '',
+					frame = document.getElementById( 'jetpack_remote_comment' ),
+					tellFrameNewParent;
+
+				tellFrameNewParent = function () {
+					if ( comm_par ) {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=25060245&postid=3284&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=6.6.1&show_cookie_consent=10&has_cookie_consent=0&sig=a80f477d0e59d17d8cf179f6b50e9faa8f9878a1#parent=https%3A%2F%2Fbytefreaks.net%2Fprogramming-2%2Fc%2Fc-undefined-reference-to-templated-class-function" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+					} else {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=25060245&postid=3284&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=6.6.1&show_cookie_consent=10&has_cookie_consent=0&sig=a80f477d0e59d17d8cf179f6b50e9faa8f9878a1#parent=https%3A%2F%2Fbytefreaks.net%2Fprogramming-2%2Fc%2Fc-undefined-reference-to-templated-class-function";
+					}
+				};
+
+				
+				if ( 'undefined' !== typeof addComment ) {
+					addComment._Jetpack_moveForm = addComment.moveForm;
+
+					addComment.moveForm = function ( commId, parentId, respondId, postId ) {
+						var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ),
+							cancelClick, cancel;
+
+						if ( false === returnValue ) {
+							cancel = document.getElementById( 'cancel-comment-reply-link' );
+							cancelClick = cancel.onclick;
+							cancel.onclick = function () {
+								var cancelReturn = cancelClick.call( this );
+								if ( false !== cancelReturn ) {
+									return cancelReturn;
+								}
+
+								if ( ! comm_par ) {
+									return cancelReturn;
+								}
+
+								comm_par = 0;
+
+								tellFrameNewParent();
+
+								return cancelReturn;
+							};
+						}
+
+						if ( comm_par == parentId ) {
+							return returnValue;
+						}
+
+						comm_par = parentId;
+
+						tellFrameNewParent();
+
+						return returnValue;
+					};
+				}
+
+				
+				// Do the post message bit after the dom has loaded.
+				document.addEventListener( 'DOMContentLoaded', function () {
+					var iframe_url = "https:\/\/jetpack.wordpress.com";
+					if ( window.postMessage ) {
+						if ( document.addEventListener ) {
+							window.addEventListener( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								jQuery( frame ).height( event.data );
+							});
+						} else if ( document.attachEvent ) {
+							window.attachEvent( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								jQuery( frame ).height( event.data );
+							});
+						}
+					}
+				})
+
+			})();
+		</script>-->
+<!--<script type="e19ec62d2e078d1d82812b27-text/javascript" src="https://stats.wp.com/e-201844.js" async="async" defer="defer"></script>-->
+<!--<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:6.6.1',blog:'25060245',post:'3284',tz:'2',srv:'bytefreaks.net'} ]);
+	_stq.push([ 'clickTrackerInit', '25060245', '3284' ]);
+</script>-->
+<div id="tc-footer-btt-wrapper" class="tc-btt-wrapper right"><i class="btt-arrow"></i></div> 
+
+
+
+</body></html>
